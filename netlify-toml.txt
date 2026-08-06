@@ -1,0 +1,7 @@
+# Destination in your repo (root, rename to exactly: netlify.toml)
+
+[build]
+  publish = "."
+
+[functions]
+  directory = "netlify/functions"
