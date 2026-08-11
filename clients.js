@@ -28,6 +28,7 @@
 export const CLIENTS = {
   squaredmap: {
     name: "SquaredMap",
+    theme: "brand", // original pink/purple look
     metricoolBlogId: "6308701",
     notion: {
       hubPage: "3b3e3d0005c0819998a7f88f96e05309",
@@ -46,6 +47,7 @@ export const CLIENTS = {
 
   skinformulas: {
     name: "Skin Formulas",
+    theme: "mono", // black & white look
     metricoolBlogId: "6346904",
     notion: {
       hubPage: "3b4e3d0005c081ed9921f8c41bbaf38d",
@@ -76,6 +78,7 @@ export function publicConfig(slug) {
   return {
     slug: String(slug).toLowerCase().trim(),
     name: c.name,
+    theme: c.theme || "mono",
     networks: c.networks,
     logos: c.logos,
   };
