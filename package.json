@@ -1,0 +1,10 @@
+{
+  "name": "kiki-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Kiki Kreative multi-client social dashboard (static site + Netlify functions)",
+  "engines": {
+    "node": ">=18"
+  }
+}

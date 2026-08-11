@@ -1,0 +1,18 @@
+# Netlify configuration for the Kiki Kreative multi-client dashboard.
+
+[build]
+  # Static files live in public/. No build step needed.
+  publish = "public"
+  functions = "netlify/functions"
+
+[functions]
+  # Bundle the ES modules with esbuild (default for v2 functions).
+  node_bundler = "esbuild"
+
+# The functions self-declare their routes via `export const config = { path }`,
+# so no manual redirects are required. This block is a harmless fallback that
+# keeps /api/* pointing at the functions if path-routing is ever disabled.
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
